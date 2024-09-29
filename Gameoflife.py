@@ -1,6 +1,6 @@
 # Automate cellulaire "Jeu de la vie" de Conway
 
-from tkinter import *
+import tkinter as tk
 # from random import randrange
 
 haut = 90  # hauteur du tableau
@@ -109,9 +109,9 @@ def boardDraw():
             canvas.itemconfig(cell[x][y], fill=coul)
 
 # Lancement du programme
-fenetre = Tk()
+fenetre = tk.Tk()
 fenetre.title("Le jeu de la vie de Conway")
-canvas = Canvas(fenetre, width=cote*larg, height=cote*haut, highlightthickness=0)
+canvas = tk.Canvas(fenetre, width=cote*larg, height=cote*haut, highlightthickness=0)
 canvas.pack()
 init()
 activation()
